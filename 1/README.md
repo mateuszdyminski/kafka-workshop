@@ -1,12 +1,6 @@
 # Kafka on Minikube Installation Guide
 
-## Requirements
-
-* Kubernetes in version >= 1.14 installed in Minikube
-* installed and configured `kubectl`
-* installed and configured `helm`
-
-### Install Strimzi Repo via Helm
+## Install Strimzi Repo via Helm
 
 Link to Strimzi main page: [strimzi.io](https://strimzi.io/)
 
