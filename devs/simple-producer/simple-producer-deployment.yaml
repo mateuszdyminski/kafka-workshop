@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: simple-producer-deployment
+  namespace: kafka-producers
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: simple-producer
+    spec:
+      containers:
+        - name: simple-producer
+          image: index.docker.io/mateuszdyminski/kafka-simple-producer:1.4
+          imagePullPolicy: Always
+          env:
+            - name: KAFKA_BOOTSTRAP_SERVERS
+              value: "kafka-cluster-kafka-bootstrap.kafka:9092"
+            - name: KAFKA_TOPIC
+              value: "kafka-topic-1"
+            - name: KAFKA_MSG
+              value: "test message"

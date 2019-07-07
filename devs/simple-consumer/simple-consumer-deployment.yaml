@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: simple-consumer-deployment
+  namespace: kafka-consumers
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: simple-consumer
+    spec:
+      containers:
+        - name: simple-producer
+          image: index.docker.io/mateuszdyminski/kafka-simple-consumer:1.3
+          imagePullPolicy: Always
+          env:
+            - name: KAFKA_BOOTSTRAP_SERVERS
+              value: "kafka-cluster-kafka-bootstrap.kafka:9092"
+            - name: KAFKA_TOPIC
+              value: "kafka-topic-1"
