@@ -1,0 +1,24 @@
+apiVersion: kafka.strimzi.io/v1alpha1
+kind: Kafka
+metadata:
+  name: my-cluster
+spec:
+  kafka:
+    ...
+    tolerations:
+      - key: "dedicated"
+        operator: "Equal"
+        value: "Kafka"
+        effect: "NoSchedule"
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchExpressions:
+            - key: dedicated
+              operator: In
+              values:
+              - Kafka
+    ...
+  zookeeper:
+    ...

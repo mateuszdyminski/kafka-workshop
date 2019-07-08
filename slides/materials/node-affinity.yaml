@@ -1,0 +1,19 @@
+apiVersion: kafka.strimzi.io/v1alpha1
+kind: Kafka
+metadata:
+  name: kafka-cluster
+spec:
+  kafka:
+    ...
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-type
+                operator: In
+                values:
+                - fast-network
+    ...
+  zookeeper:
+    ...

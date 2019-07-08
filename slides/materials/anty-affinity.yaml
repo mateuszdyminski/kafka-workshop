@@ -1,0 +1,21 @@
+apiVersion: kafka.strimzi.io/v1alpha1
+kind: Kafka
+metadata:
+  name: kafka-cluster
+spec:
+  kafka:
+    ...
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+                - key: application
+                  operator: In
+                  values:
+                    - postgresql
+                    - mongodb
+          topologyKey: "kubernetes.io/hostname"
+    ...
+  zookeeper:
+    ...

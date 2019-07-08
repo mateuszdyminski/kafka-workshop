@@ -1,0 +1,14 @@
+apiVersion: kafka.strimzi.io/v1alpha1
+kind: KafkaMirrorMaker
+metadata:
+  name: kafka-mirror-maker
+  namespace: kafka
+spec:
+  version: 2.2.1
+  replicas: 1
+  consumer:
+    bootstrapServers: kafka-cluster-kafka-bootstrap.kafka:9092
+    groupId: test-id
+  producer:
+    bootstrapServers: kafka-cluster-backup-kafka-bootstrap.kafka:9092
+  whitelist: "kafka-topic"
