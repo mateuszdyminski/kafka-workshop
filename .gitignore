@@ -4,3 +4,6 @@ target
 # IntelliJ stuff
 *.iml
 .idea
+.project
+.settings
+.classpath

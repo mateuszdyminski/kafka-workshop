@@ -41,10 +41,10 @@ The repository contains the materials for [Apache Kafka™](https://kafka.apache
   - [Exercise] Repartitioning
 - [Lecture] Kafka Configuration
   - [Lecture] Partitioning
-  - [Lecture] Retention
   - [Lecture] Log Compaction
   - [Demo] How to reconfigure Kafka Topics in Kafka on K8s
   - [Exercise] Rolling Update of Topic configuration
+  - [Exercise] Rolling Update of Broker configuration
 - [Lecture] Kafka Configuration for HA
 - [Lecture] Replicas and In-Sync Replicas (ISRs)
 - [Lecture] Monitoring Kafka Cluster
@@ -53,10 +53,8 @@ The repository contains the materials for [Apache Kafka™](https://kafka.apache
 - [Lecture] Troubleshooting and Debugging
   - [Exercise] Solving problems with running cluster
 - [Lecture] Kafka Partitioning, partition vs consuments, repartitioning
-- [Lecture][optional] Kafka Backup Strategies
-  - [Exercise][optional] Create MirrorMaker to Backup Cluster
-- [Lecture][optional] Scheduling Kafka Operational tasks
-  - [Exercise][optional] Create K8s CronJob to schedule task
+- [Lecture] Kafka Backup Strategies
+  - [Exercise] Create MirrorMaker to Backup Cluster
 
 3. Kafka for Developers
 
@@ -70,13 +68,6 @@ The repository contains the materials for [Apache Kafka™](https://kafka.apache
 - [Lecture] Patterns for Kafka Consumers and Producers
   - [Exercise] Consumer Groups
   - [Exercise] Message Acknowledgement
-  - [Exercise] Transactions
-  - [Exercise][optional] Retry sending message
-  - [Exercise][optional] Deleting messages in Kafka Topic (GDPR related)
-  - [Exercise][optional] Authentication/Authorization Example
+  - [Exercise] Transactions and Fallback technique
 - [Lecture] Kafka Streams API
   - [Exercise] Windows, Joins, Tables, and State Stores
-- [Lecture][optional] Kafka Connect
-  - [Exercise][optional] Example of Kafka Connect - streaming changes from DB and sink them in ES
-- [Lecture][optional] Avro and the Schema Registry
-  - [Exercise][optional] Create Schema for Message and use Schema registry
