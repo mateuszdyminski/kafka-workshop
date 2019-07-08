@@ -4,9 +4,9 @@ The repository contains the materials for [Apache Kafka™](https://kafka.apache
 
 ## Repository structure
 
-- [slides](presentation)
-- [demos](demos)
-- [exercises](exercises)
+- [slides](slides) - directory with all presentations
+- [admins](admins) - exercises for Kafka Administrators
+- [exercises](devs) - exercises for Developers
 
 ## Requirements
 
@@ -66,7 +66,6 @@ The repository contains the materials for [Apache Kafka™](https://kafka.apache
   - [Lecture] Consumer API
   - [Exercise] Create Simple Consumer and deploy it on K8s
 - [Lecture] Patterns for Kafka Consumers and Producers
-  - [Exercise] Consumer Groups
   - [Exercise] Message Acknowledgement
   - [Exercise] Transactions and Fallback technique
 - [Lecture] Kafka Streams API
