@@ -1,11 +1,5 @@
 # Kafka Backup
 
-## Delete namespace `monitoring`
-
-```sh
-kubectl delete namespace monitoring
-```
-
 ## Install Backup Kafka Cluster in the same namespace
 
 ```sh
